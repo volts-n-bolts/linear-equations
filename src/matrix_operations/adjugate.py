@@ -1,4 +1,4 @@
-import determinant
+from . import determinant
 
 def generate(matrix):
     size = len(matrix)  # This is used in multiple places in the method.

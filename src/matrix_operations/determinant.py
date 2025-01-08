@@ -1,4 +1,4 @@
-import heaps_algorithm
+from src.utils.heaps_algorithm import generate_permutations
 
 def calculate(matrix):
     """
@@ -18,7 +18,7 @@ def calculate(matrix):
     https://en.wikipedia.org/wiki/Leibniz_formula_for_determinants
     """
 
-    permutations_list = heaps_algorithm.generate_permutations(len(matrix))
+    permutations_list = generate_permutations(len(matrix))
 
     determinant_value = 0
 

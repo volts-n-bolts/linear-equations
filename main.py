@@ -1,8 +1,8 @@
-import determinant
-import minor_matrices
-import inverse
-import adjugate
-from multiplication import calculate as multiply
+from src.matrix_operations.determinant import calculate as det_calculate
+from src.matrix_operations.minor_matrices import generate as generate_minors
+from src.matrix_operations.inverse import calculate as inv_calculate
+from src.matrix_operations.adjugate import generate as generate_adjugate
+from src.matrix_operations.multiplication import calculate as multiply
 
 
 #        ###################
@@ -94,13 +94,12 @@ matrix_b = [[22], [31], [12], [19]]
 #
 # matrix_b = [[22], [31], [12], [19], [4], [16], [10], [8], [29]]
 
-determinant_of_a = determinant.calculate(matrix_a)
-matrix_of_minors = minor_matrices.generate(matrix_a)
-adjugate_of_a = adjugate.generate(matrix_of_minors)
+determinant_of_a = det_calculate(matrix_a)
+matrix_of_minors = generate_minors(matrix_a)
+adjugate_of_a = generate_adjugate(matrix_of_minors)
 
 # print(determinant_of_a)
 # print(adjugate.generate(matrix_of_minors))
-inverse_of_a = inverse.calculate(adjugate_of_a, determinant_of_a)
+inverse_of_a = inv_calculate(adjugate_of_a, determinant_of_a)
 
 print(multiply(inverse_of_a, matrix_b))
-

@@ -1,6 +1,30 @@
 # linear-equations
-Provides a means of solving systems of equations without needing additional Python libraries, such as NumPy. This can be universally applied to other languages.
+A lightweight Python library for solving systems of linear equations without external dependencies. Built with modularity in mind, this implementation can be easily adapted to other programming languages.
 
-`main.py` breaks the code down into invidual classes, whereas `combined.py` joins everything into a single Python script. Both are provided for preference only.
+## Overview
+This library implements matrix operations and linear algebra algorithms from first principles, making it ideal for educational purposes and situations where using NumPy or similar libraries isn't feasible.
 
-NOTE: This is only intended for systems of equations that have 9 or fewer variables. There are definitely faster approaches, but this approach uses Leibniz formula to find the determinant of a matrix.
+The codebase is available in two formats:
+- `main.py` - Modular implementation with separate classes for each operation
+- `combined.py` - Single-file version containing all functionality
+
+## Limitations
+- Optimized for systems with up to 9 variables
+- Uses Leibniz formula for determinant calculation
+- While not the fastest implementation, prioritizes clarity and portability
+
+## Project Structure
+├── main.py
+├── combined.py
+├── LICENSE
+├── README.md
+└── src/
+    ├── matrix_operations/
+    │   ├── adjugate.py
+    │   ├── determinant.py
+    │   ├── inverse.py
+    │   ├── minor_matrices.py
+    │   └── multiplication.py
+    └── utils/
+        ├── array_calculator.py
+        └── heaps_algorithm.py
